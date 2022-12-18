@@ -51,18 +51,17 @@ def main(dimx, dimy, cellsize):
                 return
 
             if event.type == pygame.KEYDOWN:
+
                 if event.key == pygame.K_SPACE:
                     running = not running
                     update(surface, cells, cellsize)
                     pygame.display.update()
 
-            if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_r:
                     cells = np.random.randint(2, size=(dimy, dimx))
                     update(surface, cells, cellsize)
                     pygame.display.update()
 
-            if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_c:
                     cells = np.random.randint(1, size=(dimy, dimx))
                     update(surface, cells, cellsize)
